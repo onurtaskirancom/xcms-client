@@ -171,7 +171,7 @@ function Posts() {
                         push={0}
                         style={{
                           marginRight: "2px",
-                          marginLeft: "-52px",
+                          marginLeft: "-20px",
                           marginTop: 25,
                           marginBottom: 25,
                           width: "100%",
