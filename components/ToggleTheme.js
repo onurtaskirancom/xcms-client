@@ -25,7 +25,8 @@ const ToggleTheme = () => {
           `,
             }}
           />
-
+          
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
         
         <link rel="stylesheet" href={`/css/${theme}.css`}/>
       </Head>
