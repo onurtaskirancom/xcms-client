@@ -22,7 +22,7 @@ const TopNav = () => {
   const [auth, setAuth] = useContext(AuthContext);
   // state
   const [current, setCurrent] = useState("mail");
-  // hooks 
+  // hooks
   const router = useRouter();
 
   const handleClick = (e) => {
@@ -52,21 +52,34 @@ const TopNav = () => {
     }
   };
 
-  
   return (
     <Menu
       onClick={handleClick}
       selectedKeys={[current]}
       mode="horizontal"
       theme="dark"
-      style={{ zIndex: 100, width: "100%", position: "fixed", paddingLeft:"80px"}}
+      style={{ zIndex: 100, width: "100%", position: "fixed" }}
     >
+      <Menu.Item key="logo" style={{ backgroundColor: "#1f1f1f" }}>
+        <Link href="/">
+          <a>
+            <img
+              src={"/images/onurtaskiran-logo.png"}
+              className="onur"
+              alt={"onur-taskiran"}
+              height={50}
+              width={50}
+              style={{}}
+            />
+          </a>
+        </Link>
+      </Menu.Item>
 
       <Menu.Item key="home">
         <Link href="/">
           <a>
             {<ExpandOutlined style={{ marginRight: "5px" }} />}
-            Home
+            HomePage
           </a>
         </Link>
       </Menu.Item>

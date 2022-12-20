@@ -69,7 +69,7 @@ function About() {
           One, Metallica - My Friend Of Misery, Metallica - Blackened, Metallica
           - Turn The Page, Limp Bizkit - Take A Look Around, Limp Bizkit - Break
           Stuff, Alabama 3 - Sad Eyed Lady Of The Lowlife, The Handsome Family -
-          Far From Any Road
+          Far From Any Road - Paradise, Stick Figure - Stick Figure, Once in a Lifetime
         </p>
         <p>
           <strong>My favorite movies: </strong> The
@@ -117,17 +117,17 @@ function About() {
                     <br />
                     <img
                       className=''
-                      src='images/angular.png'
-                      alt='onurtaskiran'
-                    />
-                    Angular
-                    <br />
-                    <img
-                      className=''
                       src='images/javascript.png'
                       alt='onurtaskiran'
                     />
                     JavaScript
+                    <br />
+                    <img
+                      className=''
+                      src='images/angular.png'
+                      alt='onurtaskiran'
+                    />
+                    Angular
                     <br />
                     <img
                       className=''

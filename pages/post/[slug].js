@@ -80,7 +80,7 @@ export const SinglePost = ({ post, postComments }) => {
             marginBottom: 25,
           }}
         >
-          <Card style={{ marginTop: "25px" }}>
+          <Card style={{ marginTop: "25px", marginRight: "25px"  }}>
             <Title>{post.title}</Title>
             <img
               src={post?.featuredImage?.url || "/images/default.jpeg"}

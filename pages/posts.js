@@ -134,7 +134,7 @@ function Posts() {
             marginBottom: 25,
           }}
         >
-          <Card>
+          <Card style={{ marginRight: "25px" }}>
             <h1 style={{ marginTop: 15 }}>{posts?.length} Posts</h1>
 
             <Input
