@@ -29,10 +29,14 @@ const ToggleTheme = () => {
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
         <link
         rel='icon'
-        href='/images/favico/favicon.ico'
+        href='/images/favicon.ico'
         type='image/x-icon'
       />
       <link rel='icon' href='/images/favicon-16x16.png' type='image/x-icon' />
+      <link rel='icon' href='/images/favicon-32x32.png' type='image/x-icon' />
+      <link rel='icon' href='/images/android-chrome-192x192.png' type='image/x-icon' />
+      <link rel='icon' href='/images/android-chrome-512x512.png' type='image/x-icon' />
+      <link rel='icon' href='/images/apple-touch-icon.png' type='image/x-icon' />
         <link rel="stylesheet" href={`/css/${theme}.css`}/>
       </Head>
       {theme === "light" ? (

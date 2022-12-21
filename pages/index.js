@@ -56,8 +56,8 @@ export const Home = ({ posts }) => {
   return (
     <>
       <Head>
-        <title>Onur Taskiran blog web site</title>
-        <meta description="Blog posts about web development, programming etc" />
+        <title>Onur Taskiran Blog Web Site</title>
+        <meta description="Web development, programming, personal, sports, cinema etc. blog posts about" />
       </Head>
       <Row style={{ paddingTop: "39px" }}>
         <Col
