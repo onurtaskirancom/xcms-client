@@ -90,6 +90,7 @@ function Signup() {
               ]}
             >
               <Input.Password
+               style={{ minWidth: "260px" }}
                 prefix={<LockOutlined className="site-form-item-icon" />}
                 type="password"
                 placeholder="Password"
