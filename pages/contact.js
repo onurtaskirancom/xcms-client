@@ -54,6 +54,7 @@ function ContactForm() {
             hasFeedback
           >
             <Input
+             style={{ minWidth: "260px" }}
               prefix={<MailOutlined className="site-form-item-icon" />}
               placeholder="Your name"
               size="large"
@@ -66,6 +67,7 @@ function ContactForm() {
             hasFeedback
           >
             <Input
+             style={{ minWidth: "260px" }}
               prefix={<LockOutlined className="site-form-item-icon" />}
               placeholder="Your email"
               size="large"
@@ -78,6 +80,7 @@ function ContactForm() {
             hasFeedback
           >
             <Input.TextArea
+             style={{ minWidth: "260px" }}
               prefix={<MailOutlined className="site-form-item-icon" />}
               placeholder="Write your message here.."
               size="large"

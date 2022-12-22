@@ -67,6 +67,7 @@ function Signup() {
               rules={[{ required: true, message: "Please input your name!" }]}
             >
               <Input
+               style={{ minWidth: "260px" }}
                 prefix={<UserOutlined className="site-form-item-icon" />}
                 placeholder="Name"
                 size="large"
@@ -75,6 +76,7 @@ function Signup() {
             {/* email */}
             <Form.Item name="email" rules={[{ type: "email" }]}>
               <Input
+               style={{ minWidth: "260px" }}
                 prefix={<MailOutlined className="site-form-item-icon" />}
                 placeholder="Email"
                 size="large"

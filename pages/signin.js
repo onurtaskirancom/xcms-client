@@ -75,6 +75,7 @@ function Signin() {
             {/* email */}
             <Form.Item name="email" rules={[{ type: "email" }]}>
               <Input
+                style={{ minWidth: "260px" }}
                 prefix={<MailOutlined className="site-form-item-icon" />}
                 placeholder="Email"
                 size="large"
@@ -88,6 +89,7 @@ function Signin() {
               ]}
             >
               <Input.Password
+                style={{ minWidth: "260px" }}
                 prefix={<LockOutlined className="site-form-item-icon" />}
                 type="password"
                 placeholder="Password"
@@ -111,9 +113,11 @@ function Signin() {
               </Button>
               <br />
               <br />
-              Don’t have an account yet?&nbsp; 
+              Don’t have an account yet?&nbsp;
               <Link href="/signup">
-                <a><strong>Sign up</strong></a>
+                <a>
+                  <strong>Sign up</strong>
+                </a>
               </Link>
               <img
                 src={"/images/onurtaskiran-logo.png"}
