@@ -83,7 +83,7 @@ export const Home = ({ posts }) => {
               {/* <Meta title={post.title} /> */}
               <Link href={`/post/${post.slug}`}>
                 <a>
-                  <h1>{post.title}</h1>
+                  <h1 className="title-xcms">{post.title}</h1>
                 </a>
               </Link>
               <p>
