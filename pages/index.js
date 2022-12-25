@@ -77,7 +77,7 @@ export const Home = ({ posts }) => {
           {allPosts.map((post, i) => (
             <Card
               key={i}
-              style={{ marginTop: "25px", marginRight: "25px" }}
+              style={{ marginTop: "25px"}}
               hoverable
             >
               {/* <Meta title={post.title} /> */}
