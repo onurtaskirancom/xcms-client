@@ -79,7 +79,7 @@ const TopNav = () => {
         <Link href="/">
           <a>
             {<ExpandOutlined style={{ marginRight: "5px" }} />}
-            HomePage
+            Home
           </a>
         </Link>
       </Menu.Item>

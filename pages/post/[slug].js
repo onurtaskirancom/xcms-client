@@ -57,7 +57,7 @@ export const SinglePost = ({ post, postComments }) => {
       setLoading(false);
     }
   };
-  
+
   return (
     <>
       <Head>
@@ -67,6 +67,7 @@ export const SinglePost = ({ post, postComments }) => {
       </Head>
       <Row style={{ paddingTop: "39px" }}>
         <Col
+          className="content"
           flex="auto"
           xs={25}
           xl={14}
@@ -75,12 +76,11 @@ export const SinglePost = ({ post, postComments }) => {
           push={1}
           style={{
             marginRight: "-20px",
-            marginLeft: "30px",
             marginTop: 25,
             marginBottom: 25,
           }}
         >
-          <Card style={{ marginTop: "25px", marginRight: "25px"  }}>
+          <Card style={{ marginTop: "25px", marginRight: "25px" }}>
             <Title>{post.title}</Title>
             <img
               src={post?.featuredImage?.url || "/images/default.jpeg"}

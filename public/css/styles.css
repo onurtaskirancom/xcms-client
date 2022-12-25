@@ -42,6 +42,7 @@ html,
 body {
   width: 100%;
   height: 100%;
+  /* overflow-x: hidden; */
 }
 input::-ms-clear,
 input::-ms-reveal {
@@ -27478,6 +27479,7 @@ div.ant-typography-edit-content.ant-typography-rtl {
 }
 
 .footerx{
+  width: 100%;
   color: #96d0ff;
   background-color: #141414;
 }
@@ -27705,3 +27707,23 @@ blockquote {
   cursor:pointer;
 }
 
+@media (max-width: 805px) {
+  body {
+    width: 90%;
+  }
+  .footerx{
+    width: 111%;
+  }
+}
+
+@media (max-width: 1198px) {
+  .content{
+    margin-left: -5px;
+  }
+}
+
+@media (min-width: 1198px) {
+  .content{
+    margin-left: 30px;
+  }
+}

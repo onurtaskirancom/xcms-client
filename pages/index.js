@@ -61,6 +61,7 @@ export const Home = ({ posts }) => {
       </Head>
       <Row style={{ paddingTop: "39px" }}>
         <Col
+          className="content"
           flex="auto"
           xs={25}
           xl={14}
@@ -69,17 +70,20 @@ export const Home = ({ posts }) => {
           push={1}
           style={{
             marginRight: "-20px",
-            marginLeft: "30px",
             marginTop: 25,
             marginBottom: 25,
           }}
         >
           {allPosts.map((post, i) => (
-            <Card key={i} style={{ marginTop: "25px", marginRight: "25px" }} hoverable>
+            <Card
+              key={i}
+              style={{ marginTop: "25px", marginRight: "25px" }}
+              hoverable
+            >
               {/* <Meta title={post.title} /> */}
-              <Link  href={`/post/${post.slug}`}>
+              <Link href={`/post/${post.slug}`}>
                 <a>
-                  <h2>{post.title}</h2>
+                  <h1>{post.title}</h1>
                 </a>
               </Link>
               <p>
@@ -125,7 +129,7 @@ export const Home = ({ posts }) => {
           ))}
           {allPosts?.length < total && (
             <Button
-            style={{marginLeft:"40%", marginTop:"10px"}}
+              style={{ marginLeft: "40%", marginTop: "10px" }}
               size="large"
               type="dashed"
               loading={loading}

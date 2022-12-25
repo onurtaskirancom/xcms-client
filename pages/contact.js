@@ -3,6 +3,7 @@ import { Form, Input, Button, Checkbox, Col, Row } from "antd";
 import { UserOutlined, LockOutlined, MailOutlined } from "@ant-design/icons";
 import Link from "next/link";
 import axios from "axios";
+import Head from "next/head";
 import { toast } from "react-hot-toast";
 import { useRouter } from "next/router";
 import Footer from "../components/pages/Footer";
@@ -29,7 +30,7 @@ function ContactForm() {
         setLoading(false);
       }
     } catch (err) {
-     // console.log("err => ", err);
+      // console.log("err => ", err);
       setLoading(false);
       toast.error("Email failed. Try again.");
     }
@@ -37,83 +38,88 @@ function ContactForm() {
 
   return (
     <>
-    <Row>
-      <Col span={8} offset={8}>
-        <h1 style={{ paddingTop: "100px" }}>Contact</h1>
+      <Head>
+        <title>Onur Taskiran Contact</title>
 
-        <Form
-          form={form}
-          name="normal_login"
-          className="login-form"
-          onFinish={onFinish}
-        >
-          {/* name */}
-          <Form.Item
-            name="name"
-            rules={[{ required: true, message: "Please enter your name" }]}
-            hasFeedback
-          >
-            <Input
-             style={{ minWidth: "260px" }}
-              prefix={<MailOutlined className="site-form-item-icon" />}
-              placeholder="Your name"
-              size="large"
-            />
-          </Form.Item>
-          {/* email */}
-          <Form.Item
-            name="email"
-            rules={[{ required: true, message: "Please enter your email" }]}
-            hasFeedback
-          >
-            <Input
-             style={{ minWidth: "260px" }}
-              prefix={<LockOutlined className="site-form-item-icon" />}
-              placeholder="Your email"
-              size="large"
-            />
-          </Form.Item>
-          {/* message */}
-          <Form.Item
-            name="message"
-            rules={[{ required: true, message: "Please enter your message" }]}
-            hasFeedback
-          >
-            <Input.TextArea
-             style={{ minWidth: "260px" }}
-              prefix={<MailOutlined className="site-form-item-icon" />}
-              placeholder="Write your message here.."
-              size="large"
-            />
-          </Form.Item>
+        <meta description="contact form send message " />
+      </Head>
+      <Row>
+        <Col span={8} offset={8}>
+          <h1 style={{ paddingTop: "100px" }}>Contact</h1>
 
-          <Form.Item>
-            <Button
-              type="primary"
-              htmlType="submit"
-              className="login-form-button"
+          <Form
+            form={form}
+            name="normal_login"
+            className="login-form"
+            onFinish={onFinish}
+          >
+            {/* name */}
+            <Form.Item
+              name="name"
+              rules={[{ required: true, message: "Please enter your name" }]}
+              hasFeedback
             >
-              Submit
-            </Button>
-            <img
-            src={"/images/onurtaskiran-logo.png"}
-            className="onur"
-            alt={"onur-taskiran"}
-            height={290}
-            width={300}
-            style={{
-              borderRadius: "20%",
-              display: "block",
-              marginLeft: "auto",
-              marginRight: "auto",
-            }}
-          />
-          </Form.Item>
-        </Form>
-      </Col>
-    </Row>
-    <ScrollUpButton />
-    <Footer />
+              <Input
+                style={{ minWidth: "260px" }}
+                prefix={<MailOutlined className="site-form-item-icon" />}
+                placeholder="Your name"
+                size="large"
+              />
+            </Form.Item>
+            {/* email */}
+            <Form.Item
+              name="email"
+              rules={[{ required: true, message: "Please enter your email" }]}
+              hasFeedback
+            >
+              <Input
+                style={{ minWidth: "260px" }}
+                prefix={<LockOutlined className="site-form-item-icon" />}
+                placeholder="Your email"
+                size="large"
+              />
+            </Form.Item>
+            {/* message */}
+            <Form.Item
+              name="message"
+              rules={[{ required: true, message: "Please enter your message" }]}
+              hasFeedback
+            >
+              <Input.TextArea
+                style={{ minWidth: "260px" }}
+                prefix={<MailOutlined className="site-form-item-icon" />}
+                placeholder="Write your message here.."
+                size="large"
+              />
+            </Form.Item>
+
+            <Form.Item>
+              <Button
+                type="primary"
+                htmlType="submit"
+                className="login-form-button"
+              >
+                Submit
+              </Button>
+              <img
+                src={"/images/onurtaskiran-logo.png"}
+                className="onur"
+                alt={"onur-taskiran"}
+                height={290}
+                width={300}
+                style={{
+                  borderRadius: "20%",
+                  display: "block",
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                }}
+              />
+            </Form.Item>
+          </Form>
+        </Col>
+      </Row>
+      <ScrollUpButton />
+      <Footer />
     </>
   );
 }

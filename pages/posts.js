@@ -3,6 +3,7 @@ import { Card, Row, Col, Button, Input, List, Avatar, Divider } from "antd";
 import Link from "next/link";
 import { PlusOutlined, SearchOutlined } from "@ant-design/icons";
 import axios from "axios";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import { AuthContext } from "../context/auth";
 import dayjs from "dayjs";
@@ -42,7 +43,7 @@ function Posts() {
 
   useEffect(() => {
     if (auth?.token) {
-     // fetchComments();
+      // fetchComments();
       fetchPosts();
       //getTotal();
       getTotalp();
@@ -56,9 +57,9 @@ function Posts() {
   }, [page]);
 
   useEffect(() => {
-   // fetchComments();
+    // fetchComments();
     fetchPosts();
-   // getTotal();
+    // getTotal();
     getTotalp();
   }, []);
 
@@ -118,6 +119,11 @@ function Posts() {
 
   return (
     <>
+      <Head>
+        <title>Onur Taskiran Blog Posts</title>
+
+        <meta description="Onur Taskiran Blog Posts search and read" />
+      </Head>
       <Row style={{ paddingTop: "39px" }}>
         <Col
           flex="auto"
@@ -210,9 +216,7 @@ function Posts() {
                             wordWrap: "break-word",
                           }}
                         >
-                         
                           {renderHtml(item.content.substring(0, 290))}...
-                       
                         </div>
                       </Col>
                     </Link>,

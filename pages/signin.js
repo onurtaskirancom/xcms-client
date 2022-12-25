@@ -3,6 +3,7 @@ import { Form, Input, Button, Checkbox, Col, Row } from "antd";
 import { UserOutlined, LockOutlined, MailOutlined } from "@ant-design/icons";
 import Link from "next/link";
 import axios from "axios";
+import Head from "next/head";
 import { toast } from "react-hot-toast";
 import { AuthContext } from "../context/auth";
 import { useRouter } from "next/router";
@@ -57,6 +58,11 @@ function Signin() {
 
   return (
     <>
+      <Head>
+        <title>Onur Taskiran Blog Signin</title>
+
+        <meta description="Onur Taskiran Blog Signin form" />
+      </Head>
       <Row>
         <Col span={8} offset={8}>
           <h1 style={{ paddingTop: "100px" }}>Signin</h1>

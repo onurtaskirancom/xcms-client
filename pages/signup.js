@@ -3,6 +3,7 @@ import { Form, Input, Button, Checkbox, Col, Row } from "antd";
 import { UserOutlined, LockOutlined, MailOutlined } from "@ant-design/icons";
 import Link from "next/link";
 import axios from "axios";
+import Head from "next/head";
 import toast from "react-hot-toast";
 import { AuthContext } from "../context/auth";
 import { useRouter } from "next/router";
@@ -13,7 +14,7 @@ function Signup() {
   const [auth, setAuth] = useContext(AuthContext);
   // hook
   const router = useRouter();
- // console.log(router);
+  // console.log(router);
   // state
   const [loading, setLoading] = useState(false);
 
@@ -51,6 +52,11 @@ function Signup() {
 
   return (
     <>
+      <Head>
+        <title>Onur Taskiran Blog Signup</title>
+
+        <meta description="Onur Taskiran Blog Signup form" />
+      </Head>
       <Row>
         <Col span={8} offset={8}>
           <h1 style={{ paddingTop: "100px" }}>Signup</h1>
@@ -67,7 +73,7 @@ function Signup() {
               rules={[{ required: true, message: "Please input your name!" }]}
             >
               <Input
-               style={{ minWidth: "260px" }}
+                style={{ minWidth: "260px" }}
                 prefix={<UserOutlined className="site-form-item-icon" />}
                 placeholder="Name"
                 size="large"
@@ -76,7 +82,7 @@ function Signup() {
             {/* email */}
             <Form.Item name="email" rules={[{ type: "email" }]}>
               <Input
-               style={{ minWidth: "260px" }}
+                style={{ minWidth: "260px" }}
                 prefix={<MailOutlined className="site-form-item-icon" />}
                 placeholder="Email"
                 size="large"
@@ -90,7 +96,7 @@ function Signup() {
               ]}
             >
               <Input.Password
-               style={{ minWidth: "260px" }}
+                style={{ minWidth: "260px" }}
                 prefix={<LockOutlined className="site-form-item-icon" />}
                 type="password"
                 placeholder="Password"
@@ -111,7 +117,9 @@ function Signup() {
               <br />
               Already have an account?&nbsp;
               <Link href="/signin">
-                <a><strong>Sign in</strong></a>
+                <a>
+                  <strong>Sign in</strong>
+                </a>
               </Link>
               <img
                 src={"/images/onurtaskiran-logo.png"}
