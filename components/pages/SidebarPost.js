@@ -36,7 +36,7 @@ const { Title } = Typography;
 
 const { Meta } = Card;
 
-export const SidebarComponent = ({ post, postComments }) => {
+export const SidebarPost = ({ post, postComments }) => {
   const [theme, setTheme] = useContext(ThemeContext);
   // comments
   const [comments, setComments] = useState(postComments);
@@ -73,26 +73,39 @@ export const SidebarComponent = ({ post, postComments }) => {
         push={1}
         style={{ marginRight: "-20px", paddingTop: "20px" }}
       >
-        <Divider>About</Divider>
+        <Divider>onurtaskiran</Divider>
         <div>
-          <img
-            src={"/images/onurtaskiran.jpg"}
+        <img
+            src={"/images/onurtaskiran-logo.png"}
             className="onur"
             alt={"onur-taskiran"}
             height={290}
             width={300}
             style={{
-              borderRadius: "50%",
+              borderRadius: "20%",
               display: "block",
               marginLeft: "auto",
               marginRight: "auto",
             }}
           />
-          <b style={{ color: "#96d0ff" }}>Hi I'm Onur Taşkıran</b>
-          <span style={{ fontSize: 35 }}>&#128075;&#127996;</span>
-          <p style={{ fontSize: 17 }}>
-            I love to write code, design and do sports. I have been working as a
-            Senior Web Developer and Graphic Designer for many years.
+          <br/>
+          <p style={{ fontSize: 17, color:"gray" }}>
+         
+            The site generally consists of articles I have written on software,
+            web technologies, cinema, and sports.   </p>
+            
+            <p style={{ fontSize: 17, color:"gray" }}> You can search from the
+            <Link href="/posts">
+                <a> posts </a>
+             </Link>
+            page and send me a message from the 
+            <Link href="/contact">
+                <a> contact</a> 
+                </Link> page. You need to be a
+                <Link href="/signup">
+                    <a> Signup </a>  
+                    </Link> to comment on the posts, you don't dont be shy, you can
+            comment freely. Good luck everyone. 
           </p>
         </div>
         {/* social media */}
@@ -102,7 +115,10 @@ export const SidebarComponent = ({ post, postComments }) => {
             <GithubOutlined />
           </a>
           &nbsp;
-          <a href="https://tr.linkedin.com/in/onur-taşkıran-3b906825b" target="_blank">
+          <a
+            href="https://tr.linkedin.com/in/onur-taşkıran-3b906825b"
+            target="_blank"
+          >
             <LinkedinOutlined />
           </a>
           &nbsp;
@@ -137,21 +153,6 @@ export const SidebarComponent = ({ post, postComments }) => {
             </a>
           </Link>
         ))}
-        <Divider>Latest Posts</Divider>
-        {latestPosts.map((p) => (
-          <Link href={`/post/${p.slug}`} key={p._id}>
-            <a>
-              {/* <h3>{p.title}</h3>
-              <hr /> */}
-
-              <h3 className=" dClass hover-x">
-                <RightCircleFilled />
-                &nbsp;&nbsp;{p.title}
-              </h3>
-              <br />
-            </a>
-          </Link>
-        ))}
         <Divider>Tags</Divider>
         {tags.map((t) => (
           <Link href={`/tag/${t.slug}`} key={t._id}>
@@ -162,26 +163,6 @@ export const SidebarComponent = ({ post, postComments }) => {
             </a>
           </Link>
         ))}
-
-        <Divider></Divider>
-        <div>
-          <img
-            src={"/images/onurtaskiran-logo.png"}
-            className="onur"
-            alt={"onur-taskiran"}
-            height={290}
-            width={300}
-            style={{
-              borderRadius: "20%",
-              display: "block",
-              marginLeft: "auto",
-              marginRight: "auto",
-            }}
-          />
-          <p style={{ fontSize: 17, textAlign:"center" }}>
-            onurtaskiran.com © 2022 - 2023
-          </p>
-        </div>
         <ScrollUpButton />
       </Col>
     </>
@@ -198,4 +179,4 @@ export async function getServerSideProps({ params }) {
   };
 }
 
-export default SidebarComponent;
+export default SidebarPost;

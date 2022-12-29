@@ -116,6 +116,7 @@ function ContactForm() {
               />
             </Form.Item>
           </Form>
+          <ScrollUpButton />
         </Col>
       </Row>
       <ScrollUpButton />

@@ -5697,8 +5697,8 @@ html {
 .ant-btn-primary:hover,
 .ant-btn-primary:focus {
 
-  border-color: #095cb5;
-  background: #095cb5;
+  /* border-color: #095cb5;
+  background: #095cb5; */
 }
 .ant-btn-primary:hover > a:only-child,
 .ant-btn-primary:focus > a:only-child {
@@ -27732,3 +27732,4 @@ blockquote {
   color:#96d0ff;
 
 }
+

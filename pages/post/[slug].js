@@ -26,7 +26,7 @@ import renderHtml from "react-render-html";
 import Footer from "../../components/pages/Footer";
 
 import relativeTime from "dayjs/plugin/relativeTime";
-import SidebarComponent from "../../components/pages/SidebarComponent";
+import SidebarPost from "../../components/pages/SidebarPost";
 dayjs.extend(relativeTime);
 
 const { Title } = Typography;
@@ -163,7 +163,7 @@ export const SinglePost = ({ post, postComments }) => {
             />
           </Card>
         </Col>
-        <SidebarComponent />
+        <SidebarPost />
       </Row>
       <Footer />
     </>

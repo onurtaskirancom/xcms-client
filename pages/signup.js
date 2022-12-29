@@ -8,6 +8,7 @@ import toast from "react-hot-toast";
 import { AuthContext } from "../context/auth";
 import { useRouter } from "next/router";
 import Footer from "../components/pages/Footer";
+import ScrollUpButton from "react-scroll-up-button";
 
 function Signup() {
   // context
@@ -136,6 +137,7 @@ function Signup() {
               />
             </Form.Item>
           </Form>
+          <ScrollUpButton />
         </Col>
       </Row>
       <Footer />

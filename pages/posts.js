@@ -106,8 +106,8 @@ function Posts() {
 
   const filteredPosts = posts?.filter(
     (post) =>
-      post.content.toLowerCase().includes(keyword) ||
-      post.title.toLowerCase().includes(keyword)
+      post.content?.toLowerCase().includes(keyword) ||
+      post.title?.toLowerCase().includes(keyword)
   );
 
   const filteredPostst = posts?.filter((p) =>
@@ -282,6 +282,25 @@ function Posts() {
               </a>
             </Link>
           ))}
+                  <Divider></Divider>
+        <div>
+          <img
+            src={"/images/onurtaskiran-logo.png"}
+            className="onur"
+            alt={"onur-taskiran"}
+            height={290}
+            width={300}
+            style={{
+              borderRadius: "20%",
+              display: "block",
+              marginLeft: "auto",
+              marginRight: "auto",
+            }}
+          />
+          <p style={{ fontSize: 17, textAlign: "center" }}>
+            onurtaskiran.com © 2022 - 2023
+          </p>
+        </div>
         </Col>
       </Row>
       <ScrollUpButton />

@@ -10,7 +10,7 @@ import useTag from "../../hooks/useTag";
 import { BorderlessTableOutlined } from "@ant-design/icons";
 import { RightCircleFilled } from "@ant-design/icons";
 import Footer from "../../components/pages/Footer";
-
+import ScrollUpButton from "react-scroll-up-button";
 
 dayjs.extend(relativeTime);
 const { Title } = Typography;
@@ -127,6 +127,7 @@ const SingleTag = ({ posts, tag }) => {
             </a>
           </Link>
         ))}
+        <ScrollUpButton />
         </Col>
       </Row>
       <Footer />

@@ -71,27 +71,27 @@ function About() {
           </p>
 
           <p>
-            <strong>My favorite songs: </strong> Metallica - One, Metallica - My
+            <strong style={{ color: "#96d0ff" }}>My favorite songs: </strong> Metallica - One, Metallica - My
             Friend Of Misery, Metallica - Blackened, Metallica - Turn The Page,
             Limp Bizkit - Take A Look Around, Limp Bizkit - Break Stuff, Alabama
             3 - Sad Eyed Lady Of The Lowlife, The Handsome Family - Far From Any
             Road - Paradise, Stick Figure - Stick Figure, Once in a Lifetime
           </p>
           <p>
-            <strong>My favorite movies: </strong> The Godfather, Papillon
+            <strong style={{ color: "#96d0ff" }}>My favorite movies: </strong> The Godfather, Papillon
             (1973), Pulp Fiction, The Hateful Eight, Sherlock Holmes (2009), The
             Lord of the Rings: The Two Towers, The Game (1997), No Country For
             Old Men, Lost Highway, Warrior, Undisputed 3, The Matrix, The Usual
             Suspects, 1408 (2007){" "}
           </p>
           <p>
-            <strong>My favorite Tv Series:</strong> Vikings, Van Helsing, Mr.
+            <strong style={{ color: "#96d0ff" }}>My favorite Tv Series:</strong> Vikings, Van Helsing, Mr.
             Robot, Sherlock, Spartacus, Peaky Blinders, Banshee, Narcos, Prison
             Break, House of Cards, La Case De Papel, The Mentalist
           </p>
           <blockquote>
             <p>
-              <strong> My favorite quotations:</strong>
+              <strong style={{ color: "#96d0ff" }}> My favorite quotations:</strong>
             </p>
             <p>
               {" "}
