@@ -16,7 +16,7 @@ import dayjs from "dayjs";
 import Editor from "rich-markdown-editor";
 import { ThemeContext } from "../../context/theme";
 import CommentForm from "../../components/comments/CommentForm";
-import { ShareSocial } from "react-share-social";
+// import { ShareSocial } from "react-share-social";
 import useCategory from "../../hooks/useCategory";
 import useTag from "../../hooks/useTag";
 import useLatestPosts from "../../hooks/useLatestPosts";
@@ -123,9 +123,9 @@ export const SinglePost = ({ post, postComments }) => {
               ))}
             </p>
             <br />
-            <br />
+
             {/* social share */}
-            <div style={{ marginTop: "-65px", marginBottom: "15px" }}>
+            {/* <div style={{ marginTop: "-65px", marginBottom: "15px" }}>
               <ShareSocial
                 url={process.browser && window.location.href}
                 socialTypes={["facebook", "twitter", "linkedin", "reddit"]}
@@ -136,7 +136,7 @@ export const SinglePost = ({ post, postComments }) => {
                   background: "none",
                 }}
               />
-            </div>
+            </div> */}
             <CommentForm
               comment={comment}
               setComment={setComment}
