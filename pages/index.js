@@ -111,6 +111,7 @@ export const Home = ({ posts }) => {
                     style={{
                       height: "100%",
                       width: "100%",
+                      marginBottom: "10px"
                     }}
                     src={post.featuredImage?.url || "images/default.jpeg"}
                     alt={post.title}

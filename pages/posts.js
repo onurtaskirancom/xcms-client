@@ -106,8 +106,8 @@ function Posts() {
 
   const filteredPosts = posts?.filter(
     (post) =>
-      post.content?.toLowerCase().includes(keyword) ||
-      post.title?.toLowerCase().includes(keyword)
+      post?.content?.toLowerCase().includes(keyword) ||
+      post?.title?.toLowerCase().includes(keyword)
   );
 
   const filteredPostst = posts?.filter((p) =>
