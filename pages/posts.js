@@ -202,18 +202,15 @@ function Posts() {
                         <a>
                           <h2 style={{ textAlign: "left" }}>{item.title}</h2>
                         </a>
-                        <List.Item.Meta
-                          style={{ textAlign: "justify" }}
-                          description={` ${dayjs(item.createdAt).format(
-                            "MMMM D, YYYY h:m A"
-                          )}`}
-                        />
                         <div
+                          className="postsx"
                           style={{
                             textAlign: "left",
                             fontSize: "18px",
                             display: "inline-block",
                             wordWrap: "break-word",
+                            // width: "74%",
+                            // float:"left"
                           }}
                         >
                           {renderHtml(item.content.substring(0, 290))}...
@@ -282,25 +279,25 @@ function Posts() {
               </a>
             </Link>
           ))}
-                  <Divider></Divider>
-        <div>
-          <img
-            src={"/images/onurtaskiran-logo.png"}
-            className="onur"
-            alt={"onur-taskiran"}
-            height={290}
-            width={300}
-            style={{
-              borderRadius: "20%",
-              display: "block",
-              marginLeft: "auto",
-              marginRight: "auto",
-            }}
-          />
-          <p style={{ fontSize: 17, textAlign: "center" }}>
-            onurtaskiran.com © 2022 - 2023
-          </p>
-        </div>
+          <Divider></Divider>
+          <div>
+            <img
+              src={"/images/onurtaskiran-logo.png"}
+              className="onur"
+              alt={"onur-taskiran"}
+              height={290}
+              width={300}
+              style={{
+                borderRadius: "20%",
+                display: "block",
+                marginLeft: "auto",
+                marginRight: "auto",
+              }}
+            />
+            <p style={{ fontSize: 17, textAlign: "center" }}>
+              onurtaskiran.com © 2022 - 2023
+            </p>
+          </div>
         </Col>
       </Row>
       <ScrollUpButton />

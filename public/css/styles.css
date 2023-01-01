@@ -27720,11 +27720,26 @@ blockquote {
   .content{
     margin-left: -5px;
   }
+  .postsx{
+    width: 74%;
+    float: left;
+  }
 }
 
 @media (min-width: 1198px) {
   .content{
     margin-left: 30px;
+  }
+  
+}
+
+@media (max-width: 1575px) {
+  h2 {
+    font-size: 20px;
+  }
+  .postsx{
+    width: 74%;
+    float: left;
   }
 }
 
