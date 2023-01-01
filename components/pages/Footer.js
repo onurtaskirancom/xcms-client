@@ -15,9 +15,9 @@ import { InstagramOutlined } from "@ant-design/icons";
 const Footer = () => (
   <div className="footerx">
       <Row >
-        <Col span={8} style={{ textAlign: "center"}}>
+        <Col span={8} style={{ textAlign: "center", fontSize:"15px"}}>
           <br />
-          onurtaskiran.com Copyright {new Date().getFullYear()} &copy; All rights reserved
+          onurtaskiran.com Copyright 2022 - {new Date().getFullYear()} &copy; All rights reserved
         </Col>
 
         <Col span={8} style={{ textAlign: "center" }}>

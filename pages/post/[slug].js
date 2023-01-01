@@ -91,7 +91,7 @@ export const SinglePost = ({ post, postComments }) => {
             />
 
             <p>
-              {dayjs(post.createdAt).format("MMMM D, YYYY h:mm A")}
+              {dayjs(post.createdAt).format("MMMM D, YYYY - h:mm ")}
               &nbsp; ~{" "}
               {post?.categories.map((c) => (
                 <span key={c._id}>

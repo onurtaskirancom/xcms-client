@@ -2853,7 +2853,7 @@ html {
 }
 .ant-empty-normal {
   margin: 32px 0;
-  color: rgba(255, 255, 255, 0.3);
+  /* color: rgba(255, 255, 255, 0.3); */
 }
 .ant-empty-normal .ant-empty-image {
   height: 40px;
@@ -27733,3 +27733,8 @@ blockquote {
 
 }
 
+code {
+    font-size: 87.5%;
+    color: #e83e8c;
+    word-break: break-word;
+}
