@@ -11,6 +11,7 @@ import { BorderlessTableOutlined } from "@ant-design/icons";
 import { RightCircleFilled } from "@ant-design/icons";
 import Footer from "../../components/pages/Footer";
 import ScrollUpButton from "react-scroll-up-button";
+import SidebarComponent from "../../components/pages/SidebarComponent";
 
 dayjs.extend(relativeTime);
 const { Title } = Typography;
@@ -57,7 +58,7 @@ const SingleCategory = ({ posts, category, tag }) => {
                   shape="square"
                   //size={160}
                   // style={{ marginRight: 15 }}
-                  style={{ height: "100px", width: "300px", marginRight: 15 }}
+                  style={{ height: "100%", width: "100%", marginRight: 15 }}
                   src={post.featuredImage?.url || "/images/default.jpeg"}
                   alt={post.title}
                 />
@@ -77,63 +78,7 @@ const SingleCategory = ({ posts, category, tag }) => {
             </Card>
           ))}
         </Col>
-
-        <Col
-          flex="400px"
-          xs={25}
-          xl={12}
-          offset={1}
-          pull={1}
-          push={1}
-          style={{ marginRight: "-20px", paddingTop: "20px" }}
-        >
-          <Divider>Categories</Divider>
-          {categories.map((c) => (
-            <Link href={`/category/${c.slug}`} key={c._id}>
-              <a>
-                {/* <Button
-                size={size}
-                type="default"
-                style={{ margin: 2, width: "80%", fontSize: "17px", marginLeft:"10%"}}
-              >
-                <HddFilled style={{ float: "left" }} />
-                {c.name}
-              </Button> */}
-                <h3 className=" dClass hover-x">
-                  <BorderlessTableOutlined />
-                  &nbsp;&nbsp;{c.name}
-                </h3>
-              </a>
-            </Link>
-          ))}
-
-          <Divider>Tags</Divider>
-          {tags.map((t) => (
-            <Link href={`/tag/${t.slug}`} key={t._id}>
-              <a>
-                <Button type="dashed" style={{ margin: 2 }}>
-                  {t.name}
-                </Button>
-              </a>
-            </Link>
-          ))}
-          <Divider>Latest Posts</Divider>
-          {latestPosts.map((p) => (
-            <Link href={`/post/${p.slug}`} key={p._id}>
-              <a>
-                {/* <h3>{p.title}</h3>
-              <hr /> */}
-
-                <h4 className=" dClass hover-x">
-                  <RightCircleFilled />
-                  &nbsp;&nbsp;{p.title}
-                </h4>
-                <br />
-              </a>
-            </Link>
-          ))}
-          <ScrollUpButton />
-        </Col>
+        <SidebarComponent />
       </Row>
       <Footer />
     </>

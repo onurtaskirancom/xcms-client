@@ -45,7 +45,7 @@ function ContactForm() {
       </Head>
       <Row>
         <Col span={8} offset={8}>
-          <h1 style={{ paddingTop: "100px" }}>Contact</h1>
+          <h1 style={{ paddingTop: '100px' }}>Contact</h1>
 
           <Form
             form={form}
@@ -56,12 +56,12 @@ function ContactForm() {
             {/* name */}
             <Form.Item
               name="name"
-              rules={[{ required: true, message: "Please enter your name" }]}
+              rules={[{ required: true, message: 'Please enter your name' }]}
               hasFeedback
             >
               <Input
-                style={{ minWidth: "260px" }}
-                prefix={<MailOutlined className="site-form-item-icon" />}
+                style={{ minWidth: '260px' }}
+                prefix={<UserOutlined className="site-form-item-icon" />}
                 placeholder="Your name"
                 size="large"
               />
@@ -69,12 +69,12 @@ function ContactForm() {
             {/* email */}
             <Form.Item
               name="email"
-              rules={[{ required: true, message: "Please enter your email" }]}
+              rules={[{ required: true, message: 'Please enter your email' }]}
               hasFeedback
             >
               <Input
-                style={{ minWidth: "260px" }}
-                prefix={<LockOutlined className="site-form-item-icon" />}
+                style={{ minWidth: '260px' }}
+                prefix={<MailOutlined className="site-form-item-icon" />}
                 placeholder="Your email"
                 size="large"
               />
@@ -82,11 +82,11 @@ function ContactForm() {
             {/* message */}
             <Form.Item
               name="message"
-              rules={[{ required: true, message: "Please enter your message" }]}
+              rules={[{ required: true, message: 'Please enter your message' }]}
               hasFeedback
             >
               <Input.TextArea
-                style={{ minWidth: "260px" }}
+                style={{ minWidth: '260px' }}
                 prefix={<MailOutlined className="site-form-item-icon" />}
                 placeholder="Write your message here.."
                 size="large"
@@ -102,16 +102,16 @@ function ContactForm() {
                 Submit
               </Button>
               <img
-                src={"/images/onurtaskiran-logo.png"}
+                src={'/images/onurtaskiran-logo.png'}
                 className="onur"
-                alt={"onur-taskiran"}
+                alt={'onur-taskiran'}
                 height={290}
                 width={300}
                 style={{
-                  borderRadius: "20%",
-                  display: "block",
-                  marginLeft: "auto",
-                  marginRight: "auto",
+                  borderRadius: '20%',
+                  display: 'block',
+                  marginLeft: 'auto',
+                  marginRight: 'auto',
                 }}
               />
             </Form.Item>

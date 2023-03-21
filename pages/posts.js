@@ -124,7 +124,7 @@ function Posts() {
 
         <meta description="Onur Taskiran Blog Posts search and read" />
       </Head>
-      <Row style={{ paddingTop: "39px" }}>
+      <Row style={{ paddingTop: '39px' }}>
         <Col
           flex="auto"
           xs={25}
@@ -133,19 +133,25 @@ function Posts() {
           pull={1}
           push={1}
           style={{
-            overflow: "hidden",
-            marginRight: "-20px",
-            marginLeft: "30px",
+            overflow: 'hidden',
+            marginRight: '-20px',
+            marginLeft: '30px',
             marginTop: 25,
             marginBottom: 25,
           }}
         >
-          <Card style={{ marginRight: "25px" }}>
+          <Card
+            style={{
+              marginTop: '25px',
+              paddingLeft: '20px',
+              paddingRight: '20px',
+            }}
+          >
             <h1 style={{ marginTop: 15 }}>{posts?.length} Posts</h1>
 
             <Input
               prefix={<SearchOutlined className="site-form-item-icon" />}
-              style={{ width: "95%" }}
+              style={{ width: '95%' }}
               size="large"
               placeholder="Search"
               type="search"
@@ -176,11 +182,11 @@ function Posts() {
                         pull={0}
                         push={0}
                         style={{
-                          marginRight: "2px",
-                          marginLeft: "-20px",
+                          marginRight: '2px',
+                          marginLeft: '-20px',
                           marginTop: 25,
                           marginBottom: 25,
-                          width: "100%",
+                          width: '100%',
                         }}
                       >
                         {/* <Avatar
@@ -200,15 +206,15 @@ function Posts() {
                             title={item.title}
                           /> */}
                         <a>
-                          <h2 style={{ textAlign: "left" }}>{item.title}</h2>
+                          <h2 style={{ textAlign: 'left' }}>{item.title}</h2>
                         </a>
                         <div
                           className="postsx"
                           style={{
-                            textAlign: "left",
-                            fontSize: "18px",
-                            display: "inline-block",
-                            wordWrap: "break-word",
+                            textAlign: 'left',
+                            fontSize: '18px',
+                            display: 'inline-block',
+                            wordWrap: 'break-word',
                             // width: "74%",
                             // float:"left"
                           }}
@@ -222,83 +228,10 @@ function Posts() {
               )}
             />
 
-            <div style={{ marginTop: "25px" }}></div>
+            <div style={{ marginTop: '25px' }}></div>
           </Card>
         </Col>
-        <Col
-          flex="400px"
-          xs={25}
-          xl={12}
-          offset={1}
-          pull={1}
-          push={1}
-          style={{ marginRight: "-20px", paddingTop: "20px" }}
-        >
-          <Divider>Categories</Divider>
-          {categories.map((c) => (
-            <Link href={`/category/${c.slug}`} key={c._id}>
-              <a>
-                {/* <Button
-                  size={size}
-                  type="default"
-                  style={{ margin: 2, width: "80%", fontSize: "17px", marginLeft:"10%"}}
-                >
-                  <HddFilled style={{ float: "left" }} />
-                  {c.name}
-                </Button> */}
-                <h3 className=" dClass hover-x">
-                  <BorderlessTableOutlined />
-                  &nbsp;&nbsp;{c.name}
-                </h3>
-              </a>
-            </Link>
-          ))}
-
-          <Divider>Tags</Divider>
-          {tags.map((t) => (
-            <Link href={`/tag/${t.slug}`} key={t._id}>
-              <a>
-                <Button type="dashed" style={{ margin: 2 }}>
-                  {t.name}
-                </Button>
-              </a>
-            </Link>
-          ))}
-          <Divider>Latest Posts</Divider>
-          {latestPosts.map((p) => (
-            <Link href={`/post/${p.slug}`} key={p._id}>
-              <a>
-                {/* <h3>{p.title}</h3>
-                <hr /> */}
-
-                <h4 className=" dClass hover-x">
-                  <RightCircleFilled />
-                  &nbsp;&nbsp;{p.title}
-                </h4>
-                <br />
-              </a>
-            </Link>
-          ))}
-          <Divider></Divider>
-          <div>
-            <img
-              src={"/images/onurtaskiran-logo.png"}
-              className="onur"
-              alt={"onur-taskiran"}
-              height={290}
-              width={300}
-              style={{
-                borderRadius: "20%",
-                display: "block",
-                marginLeft: "auto",
-                marginRight: "auto",
-              }}
-            />
-            <p style={{ fontSize: 17, textAlign: "center" }}>
-              onurtaskiran.com © 2022 - 2023
-            </p>
-          </div>
-        </Col>
+        <SidebarComponent />
       </Row>
       <ScrollUpButton />
       <Footer />

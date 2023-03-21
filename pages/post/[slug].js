@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from 'react';
 import axios from "axios";
 import {
   Row,
@@ -26,7 +26,7 @@ import renderHtml from "react-render-html";
 import Footer from "../../components/pages/Footer";
 
 import relativeTime from "dayjs/plugin/relativeTime";
-import SidebarPost from "../../components/pages/SidebarPost";
+import SidebarComponent from '../../components/pages/SidebarComponent';
 dayjs.extend(relativeTime);
 
 const { Title } = Typography;
@@ -43,6 +43,10 @@ export const SinglePost = ({ post, postComments }) => {
   const { categories } = useCategory();
   const { tags } = useTag();
   const { latestPosts } = useLatestPosts();
+
+  useEffect(() => {
+    setComments(postComments);
+  }, [postComments]);
 
   const handleSubmit = async () => {
     try {
@@ -65,7 +69,7 @@ export const SinglePost = ({ post, postComments }) => {
 
         <meta description={post.content.substring(0, 160)} />
       </Head>
-      <Row style={{ paddingTop: "39px" }}>
+      <Row style={{ paddingTop: '39px' }}>
         <Col
           className="content"
           flex="auto"
@@ -75,24 +79,30 @@ export const SinglePost = ({ post, postComments }) => {
           pull={1}
           push={1}
           style={{
-            marginRight: "-20px",
+            marginRight: '-20px',
             marginTop: 25,
             marginBottom: 25,
           }}
         >
-          <Card style={{ marginTop: "25px"}}>
+          <Card
+            style={{
+              marginTop: '25px',
+              paddingLeft: '20px',
+              paddingRight: '20px',
+            }}
+          >
             <Title>{post.title}</Title>
             <img
-              src={post?.featuredImage?.url || "/images/default.jpeg"}
+              src={post?.featuredImage?.url || '/images/default.jpeg'}
               alt={post.title}
-              height={"100%"}
-              width={"100%"}
-              style={{ borderRadius: "5px", marginBottom: "15px" }}
+              height={'100%'}
+              width={'100%'}
+              style={{ borderRadius: '5px', marginBottom: '15px' }}
             />
 
             <p>
-              {dayjs(post.createdAt).format("MMMM D, YYYY - h:mm ")}
-              &nbsp; ~{" "}
+              {dayjs(post.createdAt).format('MMMM D, YYYY - h:mm ')}
+              &nbsp; ~{' '}
               {post?.categories.map((c) => (
                 <span key={c._id}>
                   <BorderlessTableOutlined />
@@ -163,7 +173,7 @@ export const SinglePost = ({ post, postComments }) => {
             />
           </Card>
         </Col>
-        <SidebarPost />
+        <SidebarComponent />
       </Row>
       <Footer />
     </>

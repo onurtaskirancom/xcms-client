@@ -79,8 +79,8 @@ export const SidebarComponent = ({ post, postComments }) => {
             src={"/images/onurtaskiran.jpg"}
             className="onur"
             alt={"onur-taskiran"}
-            height={290}
-            width={300}
+            height={230}
+            width={240}
             style={{
               borderRadius: "50%",
               display: "block",
@@ -97,7 +97,7 @@ export const SidebarComponent = ({ post, postComments }) => {
         </div>
         {/* social media */}
         <Divider>Social Media</Divider>
-        <div style={{ fontSize: "45px" }}>
+        <div style={{ fontSize: "45px", textAlign:'center' }}>
           <a href="https://github.com/onurtaskirancom" target="_blank">
             <GithubOutlined />
           </a>
@@ -179,7 +179,7 @@ export const SidebarComponent = ({ post, postComments }) => {
             }}
           />
           <p style={{ fontSize: 17, textAlign:"center" }}>
-            onurtaskiran.com © 2022 - 2023
+            onurtaskiran.com © {new Date().getFullYear()}
           </p>
         </div>
         <ScrollUpButton />

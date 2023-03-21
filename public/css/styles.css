@@ -19070,7 +19070,7 @@ textarea.ant-input-affix-wrapper {
   /* color: rgba(255, 255, 255, 0.85); */
   font-size: 17px;
   line-height: 1.5715;
-  background-color: transparent;
+  /* background-color: transparent; */
   background-image: none;
   border: 1px solid #434343;
   border-radius: 2px;
@@ -21348,7 +21348,7 @@ textarea.ant-mentions {
 }
 .ant-modal-content {
   position: relative;
-  background-color: #1f1f1f;
+  /* background-color: #1f1f1f; */
   background-clip: padding-box;
   border: 0;
   border-radius: 2px;
@@ -21389,7 +21389,7 @@ textarea.ant-mentions {
 .ant-modal-header {
   padding: 16px 24px;
 
-  background: #1f1f1f;
+  /* background: #1f1f1f; */
   border-bottom: 1px solid #303030;
   border-radius: 2px 2px 0 0;
 }

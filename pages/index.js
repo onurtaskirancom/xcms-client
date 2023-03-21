@@ -57,9 +57,14 @@ export const Home = ({ posts }) => {
     <>
       <Head>
         <title>Onur Taskiran Blog Web Site</title>
-        <meta description="Web development, programming, personal, sports, cinema etc. blog posts about" />
+        <meta description="onurtaskiran personel bog web site" />
+        <meta
+          name="keywords"
+          content="Personal blog, onur taşkıran author, javascript, react, web, game, cinema, software, onur taskiran, web developer"
+        />
+        <meta name="author" content="onur taskiran" />
       </Head>
-      <Row style={{ paddingTop: "39px" }}>
+      <Row style={{ paddingTop: '39px' }}>
         <Col
           className="content"
           flex="auto"
@@ -69,7 +74,7 @@ export const Home = ({ posts }) => {
           pull={1}
           push={1}
           style={{
-            marginRight: "-20px",
+            marginRight: '-20px',
             marginTop: 25,
             marginBottom: 25,
           }}
@@ -77,7 +82,11 @@ export const Home = ({ posts }) => {
           {allPosts.map((post, i) => (
             <Card
               key={i}
-              style={{ marginTop: "25px"}}
+              style={{
+                marginTop: '25px',
+                paddingLeft: '20px',
+                paddingRight: '20px',
+              }}
               hoverable
             >
               {/* <Meta title={post.title} /> */}
@@ -87,8 +96,8 @@ export const Home = ({ posts }) => {
                 </a>
               </Link>
               <p>
-                {dayjs(post.createdAt).format("MMMM D, YYYY - h:mm ")}
-                &nbsp; ~{" "}
+                {dayjs(post.createdAt).format('MMMM D, YYYY - h:mm ')}
+                &nbsp; ~{' '}
                 {post?.categories.map((c) => (
                   <span key={c._id}>
                     <BorderlessTableOutlined />
@@ -109,18 +118,18 @@ export const Home = ({ posts }) => {
                   <Avatar
                     shape="square"
                     style={{
-                      height: "100%",
-                      width: "100%",
-                      marginBottom: "10px"
+                      height: '100%',
+                      width: '100%',
+                      marginBottom: '10px',
                     }}
-                    src={post.featuredImage?.url || "images/default.jpeg"}
+                    src={post.featuredImage?.url || 'images/default.jpeg'}
                     alt={post.title}
                   />
                 </a>
               </Link>
               {/* {post.content.substring(0, 460)}... */}
               {/* {renderHtml(post.content)} */}
-              {renderHtml(post.content.substring(0, 460))}
+              {renderHtml(post.content.substring(0, 560))}
               <Link href={`/post/${post.slug}`}>
                 <a>
                   <Button type="dashed">Read More...</Button>
@@ -130,7 +139,7 @@ export const Home = ({ posts }) => {
           ))}
           {allPosts?.length < total && (
             <Button
-              style={{ marginLeft: "40%", marginTop: "10px" }}
+              style={{ marginLeft: '40%', marginTop: '10px' }}
               size="large"
               type="dashed"
               loading={loading}
