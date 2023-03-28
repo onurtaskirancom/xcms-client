@@ -66,8 +66,21 @@ export const SinglePost = ({ post, postComments }) => {
     <>
       <Head>
         <title>{post.title}</title>
-
         <meta description={post.content.substring(0, 160)} />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:creator" content="@onurtskrncom"></meta>
+        <meta name="twitter:title" content={post.title} />
+        <meta
+          name="twitter:url"
+          content={`https://onurtaskiran.com/post/${post.slug}`}
+        />
+        <meta
+          name="twitter:image"
+          content={
+            post?.featuredImage?.url ||
+            'https://onurtaskiran.com/images/default.jpeg'
+          }
+        />
       </Head>
       <Row style={{ paddingTop: '39px' }}>
         <Col

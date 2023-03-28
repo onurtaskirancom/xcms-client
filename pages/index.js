@@ -57,12 +57,23 @@ export const Home = ({ posts }) => {
     <>
       <Head>
         <title>Onur Taskiran Blog Web Site</title>
-        <meta description="onurtaskiran personel bog web site" />
+        <meta
+          name="description"
+          content="Onur Taşkıran's personal blog. I share posts in software, design, cinema, sports, etc."
+        ></meta>
         <meta
           name="keywords"
-          content="Personal blog, onur taşkıran author, javascript, react, web, game, cinema, software, onur taskiran, web developer"
+          content="Personal blog, onur taşkıran, javascript, react, web, game, cinema, software, onur taskiran, web developer"
         />
         <meta name="author" content="onur taskiran" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:creator" content="@onurtskrncom"></meta>
+        <meta name="twitter:title" content="Onur Taskiran Blog Web Site" />
+        <meta
+          name="twitter:description"
+          content="Onur Taşkıran's personal blog. I share posts in software, design, cinema, sports, etc"
+        />
+        <meta name="twitter:url" content="https://onurtaskiran.com" />
       </Head>
       <Row style={{ paddingTop: '39px' }}>
         <Col
