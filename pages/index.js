@@ -1,16 +1,16 @@
-import { useContext, useState, useEffect } from "react";
-import axios from "axios";
-import { Row, Col, Card, Avatar, Button } from "antd";
-import Head from "next/head";
-import Link from "next/link";
-import SidebarComponent from "../components/pages/SidebarComponent";
-import { renderToHtml } from "rich-markdown-editor";
-import Editor from "rich-markdown-editor";
-import { ThemeContext } from "../context/theme";
-import Footer from "../components/pages/Footer";
-import dayjs from "dayjs";
-import { BorderlessTableOutlined } from "@ant-design/icons";
-import renderHtml from "react-render-html";
+import { useContext, useState, useEffect } from 'react';
+import axios from 'axios';
+import { Row, Col, Card, Avatar, Button } from 'antd';
+import Head from 'next/head';
+import Link from 'next/link';
+import SidebarComponent from '../components/pages/SidebarComponent';
+import { renderToHtml } from 'rich-markdown-editor';
+import Editor from 'rich-markdown-editor';
+import { ThemeContext } from '../context/theme';
+import Footer from '../components/pages/Footer';
+import dayjs from 'dayjs';
+import { BorderlessTableOutlined } from '@ant-design/icons';
+import renderHtml from 'react-render-html';
 
 const { Meta } = Card;
 
@@ -33,7 +33,7 @@ export const Home = ({ posts }) => {
 
   const getTotal = async () => {
     try {
-      const { data } = await axios.get("/post-count");
+      const { data } = await axios.get('/post-count');
       //console.log("total", data);
       setTotal(data);
     } catch (err) {
@@ -69,6 +69,10 @@ export const Home = ({ posts }) => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@onurtskrncom"></meta>
         <meta name="twitter:title" content="Onur Taskiran Blog Web Site" />
+        <meta
+          name="twitter:image"
+          content="https://onurtaskiran.com/images/default.jpeg"
+        />
         <meta
           name="twitter:description"
           content="Onur Taskiran's personal blog web site. I share posts in software, design, video game, cinema, sports, etc."
