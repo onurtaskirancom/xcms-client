@@ -66,8 +66,8 @@ export const SinglePost = ({ post, postComments }) => {
     <>
       <Head>
         <title>{post.title}</title>
-        <meta description={post.content.substring(0, 160)} />
-        <meta name="twitter:card" content="summary" />
+        <meta description={renderHtml(post.content.substring(0, 160).slice(3, 160))} />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@onurtskrncom"></meta>
         <meta name="twitter:title" content={post.title} />
         <meta
@@ -81,6 +81,11 @@ export const SinglePost = ({ post, postComments }) => {
             'https://onurtaskiran.com/images/default.jpeg'
           }
         />
+
+        <meta
+          name="twitter:description"
+          content={post.content.substring(0, 124).slice(3, 124)}
+        ></meta>
       </Head>
       <Row style={{ paddingTop: '39px' }}>
         <Col

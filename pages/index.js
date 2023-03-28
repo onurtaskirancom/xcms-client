@@ -59,19 +59,19 @@ export const Home = ({ posts }) => {
         <title>Onur Taskiran Blog Web Site</title>
         <meta
           name="description"
-          content="Onur Taşkıran's personal blog. I share posts in software, design, cinema, sports, etc."
+          content="Onur Taskiran's personal blog web site. I share posts in software, design, video game, cinema, sports, etc."
         ></meta>
         <meta
           name="keywords"
           content="Personal blog, onur taşkıran, javascript, react, web, game, cinema, software, onur taskiran, web developer"
         />
         <meta name="author" content="onur taskiran" />
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@onurtskrncom"></meta>
         <meta name="twitter:title" content="Onur Taskiran Blog Web Site" />
         <meta
           name="twitter:description"
-          content="Onur Taşkıran's personal blog. I share posts in software, design, cinema, sports, etc"
+          content="Onur Taskiran's personal blog web site. I share posts in software, design, video game, cinema, sports, etc."
         />
         <meta name="twitter:url" content="https://onurtaskiran.com" />
       </Head>
@@ -140,7 +140,7 @@ export const Home = ({ posts }) => {
               </Link>
               {/* {post.content.substring(0, 460)}... */}
               {/* {renderHtml(post.content)} */}
-              {renderHtml(post.content.substring(0, 560))}
+              {renderHtml(post.content.substring(0, 500))}
               <Link href={`/post/${post.slug}`}>
                 <a>
                   <Button type="dashed">Read More...</Button>
