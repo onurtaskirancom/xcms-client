@@ -213,6 +213,7 @@ function Posts() {
                           style={{
                             textAlign: 'left',
                             fontSize: '18px',
+                            marginRight: '18px',
                             display: 'inline-block',
                             wordWrap: 'break-word',
                             // width: "74%",
