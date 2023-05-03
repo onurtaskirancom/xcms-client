@@ -32,7 +32,7 @@ const SingleCategory = ({ posts, category, tag }) => {
         />
       </Head>
 
-      <Row style={{ paddingTop: "39px" }}>
+      <Row style={{ paddingTop: '39px' }}>
         <Col
           flex="auto"
           xs={25}
@@ -41,37 +41,37 @@ const SingleCategory = ({ posts, category, tag }) => {
           pull={1}
           push={1}
           style={{
-            marginRight: "-20px",
-            marginLeft: "30px",
+            marginRight: '-20px',
+            marginLeft: '30px',
             marginTop: 25,
             marginBottom: 25,
           }}
         >
-          <h1 style={{ textAlign: "center" }}>Category: {category.name}</h1>
+          <h1 style={{ textAlign: 'center' }}>Category: {category.name}</h1>
 
           {/* posts list */}
 
           {posts.map((post) => (
             <Card key={post._id}>
-              <div style={{ display: "flex", width: "80%", float: "left" }}>
+              <div style={{ display: 'flex', width: '80%', float: 'left' }}>
                 <Avatar
                   shape="square"
                   //size={160}
                   // style={{ marginRight: 15 }}
-                  style={{ height: "100%", width: "100%", marginRight: 15 }}
-                  src={post.featuredImage?.url || "/images/default.jpeg"}
+                  style={{ height: '100%', width: '100%', marginRight: 15 }}
+                  src={post.featuredImage?.url || '/images/default.jpeg'}
                   alt={post.title}
                 />
 
-                <div style={{ width: "100%", float: "right" }}>
+                <div style={{ width: '100%', float: 'right' }}>
                   <Link href={`/post/${post.slug}`}>
                     <a>
                       <Title level={3}>{post.title}</Title>
                     </a>
                   </Link>
                   <p>
-                    {dayjs(post.createdAt).format("MMMM D, YYYY h:m A")} / by{" "}
-                    {post?.postedBy?.name}
+                    📅{dayjs(post.createdAt).format('MMMM D, YYYY - HH:mm')} ~
+                    👨‍💼 {post?.postedBy?.name}
                   </p>
                 </div>
               </div>

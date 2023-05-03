@@ -92,7 +92,7 @@ export const SidebarComponent = ({ post, postComments }) => {
           <span style={{ fontSize: 35 }}>&#128075;&#127996;</span>
           <p style={{ fontSize: 17 }}>
             I love to write code, design and do sports. I have been working as a
-            Senior Web Developer and Graphic Designer for many years.
+             Web Developer and Graphic Designer for many years.
           </p>
         </div>
         {/* social media */}

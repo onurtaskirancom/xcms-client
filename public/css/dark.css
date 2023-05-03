@@ -27687,7 +27687,7 @@ h3:hover {
  }
  
  .token.number {
-     color: #6ad7cd;
+     color: #ef8fd6;
  }
  
  .token.selector,
@@ -27696,7 +27696,7 @@ h3:hover {
  .token.char,
  .token.builtin,
  .token.inserted {
-     color: #ffbedc;
+     color: #96ecff;
  }
  
  .token.variable {
@@ -27727,7 +27727,7 @@ h3:hover {
  }
  
  .token.function {
-     color: #DAD085;
+     color: #d3b986;
  }
  
  .token.regex {

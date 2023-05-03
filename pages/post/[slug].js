@@ -66,7 +66,9 @@ export const SinglePost = ({ post, postComments }) => {
     <>
       <Head>
         <title>{post.title}</title>
-        <meta description={renderHtml(post.content.substring(0, 160).slice(3, 160))} />
+        <meta
+          description={renderHtml(post.content.substring(0, 160).slice(3, 160))}
+        />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@onurtskrncom"></meta>
         <meta name="twitter:title" content={post.title} />
@@ -105,8 +107,8 @@ export const SinglePost = ({ post, postComments }) => {
           <Card
             style={{
               marginTop: '25px',
-              paddingLeft: '20px',
-              paddingRight: '20px',
+              paddingLeft: '30px',
+              paddingRight: '30px',
             }}
           >
             <Title>{post.title}</Title>
@@ -115,11 +117,11 @@ export const SinglePost = ({ post, postComments }) => {
               alt={post.title}
               height={'100%'}
               width={'100%'}
-              style={{ borderRadius: '5px', marginBottom: '15px' }}
+              style={{ borderRadius: '10px', marginBottom: '15px' }}
             />
 
             <p>
-              {dayjs(post.createdAt).format('MMMM D, YYYY - h:mm ')}
+              📅{dayjs(post.createdAt).format('MMMM D, YYYY - HH:mm')}
               &nbsp; ~{' '}
               {post?.categories.map((c) => (
                 <span key={c._id}>

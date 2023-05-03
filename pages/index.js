@@ -99,8 +99,8 @@ export const Home = ({ posts }) => {
               key={i}
               style={{
                 marginTop: '25px',
-                paddingLeft: '20px',
-                paddingRight: '20px',
+                paddingLeft: '30px',
+                paddingRight: '30px',
               }}
               hoverable
             >
@@ -111,7 +111,7 @@ export const Home = ({ posts }) => {
                 </a>
               </Link>
               <p>
-                {dayjs(post.createdAt).format('MMMM D, YYYY - h:mm ')}
+                📅{dayjs(post.createdAt).format('MMMM D, YYYY - HH:mm')}
                 &nbsp; ~{' '}
                 {post?.categories.map((c) => (
                   <span key={c._id}>
@@ -135,6 +135,7 @@ export const Home = ({ posts }) => {
                     style={{
                       height: '100%',
                       width: '100%',
+                      borderRadius: '10px',
                       marginBottom: '10px',
                     }}
                     src={post.featuredImage?.url || 'images/default.jpeg'}
