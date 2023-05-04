@@ -7,7 +7,7 @@ import relativeTime from "dayjs/plugin/relativeTime";
 import useLatestPosts from "../../hooks/useLatestPosts";
 import useCategory from "../../hooks/useCategory";
 import useTag from "../../hooks/useTag";
-import { BorderlessTableOutlined } from "@ant-design/icons";
+import { BorderlessTableOutlined, UserOutlined } from "@ant-design/icons";
 import { RightCircleFilled } from "@ant-design/icons";
 import Footer from "../../components/pages/Footer";
 import ScrollUpButton from "react-scroll-up-button";
@@ -66,8 +66,8 @@ const SingleTag = ({ posts, tag }) => {
                     </a>
                   </Link>
                   <p>
-                    📅{dayjs(post.createdAt).format('MMMM D, YYYY - HH:mm')} ~
-                    👨‍💼 {post?.postedBy?.name}
+                    {dayjs(post.createdAt).format('MMMM D, YYYY - HH:mm')} ~
+                    <UserOutlined /> {post?.postedBy?.name}
                   </p>
                 </div>
               </div>

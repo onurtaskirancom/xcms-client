@@ -10,32 +10,7 @@ import Footer from "../components/pages/Footer";
 import ScrollUpButton from "react-scroll-up-button";
 
 function About() {
-  // state
-  const [loading, setLoading] = useState(false);
-  // hooks
-  const router = useRouter();
-  const [form] = Form.useForm();
-
-  const onFinish = async (values) => {
-    // console.log("values => ", values);
-    setLoading(true);
-    try {
-      const { data } = await axios.post("/contact", values);
-      if (data?.error) {
-        toast.error(data?.error);
-        setLoading(false);
-      } else {
-        toast.success("Your message has been sent");
-        form.resetFields();
-        setLoading(false);
-      }
-    } catch (err) {
-      console.log("err => ", err);
-      setLoading(false);
-      toast.error("Email failed. Try again.");
-    }
-  };
-
+  
   return (
     <>
       <Head>

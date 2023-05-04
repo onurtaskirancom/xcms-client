@@ -9,7 +9,7 @@ import Editor from 'rich-markdown-editor';
 import { ThemeContext } from '../context/theme';
 import Footer from '../components/pages/Footer';
 import dayjs from 'dayjs';
-import { BorderlessTableOutlined } from '@ant-design/icons';
+import { BorderlessTableOutlined, CalendarOutlined } from '@ant-design/icons';
 import renderHtml from 'react-render-html';
 
 const { Meta } = Card;
@@ -111,6 +111,7 @@ export const Home = ({ posts }) => {
                 </a>
               </Link>
               <p>
+                <CalendarOutlined />&nbsp;
                 {dayjs(post.createdAt).format('MMMM D, YYYY - HH:mm')}
                 &nbsp; ~{' '}
                 {post?.categories.map((c) => (

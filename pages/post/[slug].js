@@ -20,7 +20,7 @@ import CommentForm from "../../components/comments/CommentForm";
 import useCategory from "../../hooks/useCategory";
 import useTag from "../../hooks/useTag";
 import useLatestPosts from "../../hooks/useLatestPosts";
-import { TagsFilled } from "@ant-design/icons";
+import { CalendarOutlined, TagsFilled } from "@ant-design/icons";
 import { BorderlessTableOutlined } from "@ant-design/icons";
 import renderHtml from "react-render-html";
 import Footer from "../../components/pages/Footer";
@@ -121,7 +121,8 @@ export const SinglePost = ({ post, postComments }) => {
             />
 
             <p>
-              {dayjs(post.createdAt).format('MMMM D, YYYY - HH:mm')}
+              <CalendarOutlined />
+              &nbsp;{dayjs(post.createdAt).format('MMMM D, YYYY - HH:mm')}
               &nbsp; ~{' '}
               {post?.categories.map((c) => (
                 <span key={c._id}>
