@@ -111,7 +111,7 @@ export const Home = ({ posts }) => {
                 </a>
               </Link>
               <p>
-                📅{dayjs(post.createdAt).format('MMMM D, YYYY - HH:mm')}
+                {dayjs(post.createdAt).format('MMMM D, YYYY - HH:mm')}
                 &nbsp; ~{' '}
                 {post?.categories.map((c) => (
                   <span key={c._id}>
