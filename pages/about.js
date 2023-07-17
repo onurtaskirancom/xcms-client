@@ -22,7 +22,7 @@ function About() {
         <Col span={18} offset={3} style={{ fontSize: "18px" }}>
           <h1 style={{ paddingTop: "100px" }}>About Onur Taşkıran</h1>
           <img
-            style={{ float: "right" }}
+            style={{ float: "right", width: "", marginLeft:"10px", maxWidth: "100%"}}
             className="neo-about col-md-3"
             src="images/onur-taskiran-profile.jpg"
             width=""
