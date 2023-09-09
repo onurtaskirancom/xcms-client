@@ -29,6 +29,7 @@ import { MailOutlined } from "@ant-design/icons";
 import { InstagramOutlined } from "@ant-design/icons";
 import relativeTime from "dayjs/plugin/relativeTime";
 import ScrollUpButton from "react-scroll-up-button";
+import { FaXTwitter } from 'react-icons/fa6';
 
 dayjs.extend(relativeTime);
 
@@ -71,43 +72,45 @@ export const SidebarComponent = ({ post, postComments }) => {
         offset={1}
         pull={1}
         push={1}
-        style={{ marginRight: "-20px", paddingTop: "20px" }}
+        style={{ marginRight: '-20px', paddingTop: '20px' }}
       >
         <Divider>About</Divider>
         <div>
           <img
-            src={"/images/onurtaskiran.jpg"}
+            src={'/images/onurtaskiran.jpg'}
             className="onur"
-            alt={"onur-taskiran"}
+            alt={'onur-taskiran'}
             height={230}
             width={240}
             style={{
-              borderRadius: "50%",
-              display: "block",
-              marginLeft: "auto",
-              marginRight: "auto",
+              borderRadius: '50%',
+              display: 'block',
+              marginLeft: 'auto',
+              marginRight: 'auto',
             }}
           />
-          <b style={{ color: "#96d0ff" }}>Hi I'm Onur Taşkıran</b>
+          <b style={{ color: '#96d0ff' }}>Hi I'm Onur Taşkıran</b>
           <span style={{ fontSize: 35 }}>&#128075;&#127996;</span>
           <p style={{ fontSize: 17 }}>
             I love to write code, design and do sports. I have been working as a
-             Web Developer and Graphic Designer for many years.
+            Web Developer and Graphic Designer for many years.
           </p>
         </div>
         {/* social media */}
         <Divider>Social Media</Divider>
-        <div style={{ fontSize: "45px", textAlign:'center' }}>
+        <div style={{ fontSize: '45px', textAlign: 'center' }}>
           <a href="https://github.com/onurtaskirancom" target="_blank">
             <GithubOutlined />
           </a>
           &nbsp;
-          <a href="https://tr.linkedin.com/in/onur-taşkıran-3b906825b" target="_blank">
+          <a href="https://tr.linkedin.com/in/onurtaskirancom" target="_blank">
             <LinkedinOutlined />
           </a>
           &nbsp;
-          <a href="https://twitter.com/onurtskrncom" target="_blank">
-            <TwitterOutlined />
+          <a href="https://twitter.com/onurtskrncom" target="_blank" style={{}}>
+            <FaXTwitter
+              style={{ verticalAlign: 'middle', marginTop: '-11px' }}
+            />
           </a>
           &nbsp;
           <a href="https://instagram.com/onurtskrncom" target="_blank">
@@ -166,19 +169,19 @@ export const SidebarComponent = ({ post, postComments }) => {
         <Divider></Divider>
         <div>
           <img
-            src={"/images/onurtaskiran-logo.png"}
+            src={'/images/onurtaskiran-logo.png'}
             className="onur"
-            alt={"onur-taskiran"}
+            alt={'onur-taskiran'}
             height={290}
             width={300}
             style={{
-              borderRadius: "20%",
-              display: "block",
-              marginLeft: "auto",
-              marginRight: "auto",
+              borderRadius: '20%',
+              display: 'block',
+              marginLeft: 'auto',
+              marginRight: 'auto',
             }}
           />
-          <p style={{ fontSize: 17, textAlign:"center" }}>
+          <p style={{ fontSize: 17, textAlign: 'center' }}>
             onurtaskiran.com © {new Date().getFullYear()}
           </p>
         </div>

@@ -24,6 +24,7 @@ import { CalendarOutlined, TagsFilled } from "@ant-design/icons";
 import { BorderlessTableOutlined } from "@ant-design/icons";
 import renderHtml from "react-render-html";
 import Footer from "../../components/pages/Footer";
+import { AiOutlineFlag } from 'react-icons/ai';
 
 import relativeTime from "dayjs/plugin/relativeTime";
 import SidebarComponent from '../../components/pages/SidebarComponent';
@@ -143,7 +144,7 @@ export const SinglePost = ({ post, postComments }) => {
             {renderHtml(post.content)}
 
             <p>
-              <br /> Tags:&nbsp;&nbsp;
+              <br /> <AiOutlineFlag /> Tags: &nbsp;&nbsp;&nbsp;
               {post?.tags.map((t) => (
                 <span key={t._id}>
                   <TagsFilled />
