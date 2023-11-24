@@ -13,7 +13,7 @@ function PageErrorTwo() {
   return (
     <>
       <Head>
-        <title>Onur Taskiran 404 Page Not Found</title>
+        <title>Onur Taskiran 500 Server Error</title>
       </Head>
       <Row>
         <Col
@@ -22,7 +22,7 @@ function PageErrorTwo() {
           style={{ fontSize: '18px', textAlign: 'center' }}
         >
           <h1 style={{ paddingTop: '125px' }}>500 Error</h1>
-          <p>Please, make sure you have typed the current URL</p>
+          <p>Server Error. Let me try again</p>
         </Col>
       </Row>
       <ScrollUpButton />
