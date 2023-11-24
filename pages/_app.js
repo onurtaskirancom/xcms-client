@@ -17,6 +17,7 @@ import { useEffect } from "react";
 function MyApp({ Component, pageProps }) {
 
   useEffect(()=>{
+    document.documentElement.lang = 'en';
     Prism.highlightAll();
   })
 

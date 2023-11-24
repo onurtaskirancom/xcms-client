@@ -105,17 +105,11 @@ export const SinglePost = ({ post, postComments }) => {
             marginBottom: 25,
           }}
         >
-          <Card
-            style={{
-              marginTop: '25px',
-              paddingLeft: '30px',
-              paddingRight: '30px',
-            }}
-          >
+          <Card className="allpost">
             <Title>{post.title}</Title>
             <img
               src={post?.featuredImage?.url || '/images/default.jpeg'}
-              alt={post.title}
+              alt={post.title + ' - onurtaskiran.com '}
               height={'100%'}
               width={'100%'}
               style={{ borderRadius: '10px', marginBottom: '15px' }}

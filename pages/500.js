@@ -9,8 +9,7 @@ import { useRouter } from 'next/router';
 import Footer from '../components/pages/Footer';
 import ScrollUpButton from 'react-scroll-up-button';
 
-function PageNotFound() {
-
+function PageErrorTwo() {
   return (
     <>
       <Head>
@@ -22,19 +21,8 @@ function PageNotFound() {
           offset={3}
           style={{ fontSize: '18px', textAlign: 'center' }}
         >
-          <h1 style={{ paddingTop: '125px' }}>404 Page Not Found</h1>
-          <p>The requested page was not found on this server. </p>
+          <h1 style={{ paddingTop: '125px' }}>500 Error</h1>
           <p>Please, make sure you have typed the current URL</p>
-          <img
-            style={{
-              margin: 'auto',
-              paddingTop: '30px',
-              paddingBottom: '30px',
-            }}
-            className="col-md-3"
-            src="https://onurtaskiran.com/images/onurtaskiran404.png"
-            alt="onurtaskiran"
-          />
         </Col>
       </Row>
       <ScrollUpButton />
@@ -43,5 +31,4 @@ function PageNotFound() {
   );
 }
 
-export default PageNotFound;
-
+export default PageErrorTwo;

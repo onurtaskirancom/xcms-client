@@ -44,7 +44,7 @@ function ContactForm() {
         <meta description="contact form send message " />
       </Head>
       <Row>
-        <Col span={8} offset={8}>
+        <Col span={8} offset={8} className="neo-contact">
           <h1 style={{ paddingTop: '100px' }}>Contact</h1>
 
           <Form
@@ -60,7 +60,7 @@ function ContactForm() {
               hasFeedback
             >
               <Input
-                style={{ minWidth: '260px' }}
+                style={{ minWidth: '300px' }}
                 prefix={<UserOutlined className="site-form-item-icon" />}
                 placeholder="Your name"
                 size="large"
@@ -73,7 +73,7 @@ function ContactForm() {
               hasFeedback
             >
               <Input
-                style={{ minWidth: '260px' }}
+                style={{ minWidth: '300px' }}
                 prefix={<MailOutlined className="site-form-item-icon" />}
                 placeholder="Your email"
                 size="large"
@@ -86,7 +86,7 @@ function ContactForm() {
               hasFeedback
             >
               <Input.TextArea
-                style={{ minWidth: '260px' }}
+                style={{ minWidth: '300px', height: '150px' }}
                 prefix={<MailOutlined className="site-form-item-icon" />}
                 placeholder="Write your message here.."
                 size="large"
@@ -112,6 +112,7 @@ function ContactForm() {
                   display: 'block',
                   marginLeft: 'auto',
                   marginRight: 'auto',
+                  marginTop: '30px',
                 }}
               />
             </Form.Item>

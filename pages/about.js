@@ -19,11 +19,10 @@ function About() {
         <meta description=" Hi my friend, I'm Onur Taşkıran. I live in Istanbul." />
       </Head>
       <Row>
-        <Col span={18} offset={3} style={{ fontSize: "18px" }}>
-          <h1 style={{ paddingTop: "100px" }}>About Onur Taşkıran</h1>
+        <Col span={20} offset={2} style={{ fontSize: '18px' }}>
+          <h1 style={{ paddingTop: '100px' }}>About Onur Taşkıran</h1>
           <img
-            style={{ float: "right", width: "", marginLeft:"10px", maxWidth: "100%"}}
-            className="neo-about col-md-3"
+            className="neo-about"
             src="images/onur-taskiran-profile.jpg"
             width=""
             height=""
@@ -40,42 +39,46 @@ function About() {
             life definition...
           </p>
           <p>
-            Follow me maybe one day i can buy you coffee but I'll probably be
-            busy so I'm not buying. come on take care. Despite everything, this
-            boy loves you all.
+            Follow me maybe one day i can buy you coffee. Come on take care.
+            Despite everything, this boy loves you all.
           </p>
 
           <p>
-            <strong style={{ color: "#96d0ff" }}>My favorite songs: </strong> Metallica - One, Metallica - My
-            Friend Of Misery, Metallica - Blackened, Metallica - Turn The Page,
-            Limp Bizkit - Take A Look Around, Limp Bizkit - Break Stuff, Alabama
-            3 - Sad Eyed Lady Of The Lowlife, The Handsome Family - Far From Any
-            Road - Paradise, Stick Figure - Stick Figure, Once in a Lifetime
+            <strong style={{ color: '#96d0ff' }}>My favorite songs: </strong>{' '}
+            Metallica - One, Metallica - My Friend Of Misery, Metallica -
+            Blackened, Metallica - Turn The Page, Limp Bizkit - Take A Look
+            Around, Limp Bizkit - Break Stuff, Alabama 3 - Sad Eyed Lady Of The
+            Lowlife, The Handsome Family - Far From Any Road, Stick
+            Figure - Paradise, - Stick Figure - Once in a Lifetime
           </p>
           <p>
-            <strong style={{ color: "#96d0ff" }}>My favorite movies: </strong> The Godfather, Papillon
-            (1973), Pulp Fiction, The Hateful Eight, Sherlock Holmes (2009), The
-            Lord of the Rings: The Two Towers, The Game (1997), No Country For
-            Old Men, Lost Highway, Warrior, Undisputed 3, The Matrix, The Usual
-            Suspects, 1408 (2007){" "}
+            <strong style={{ color: '#96d0ff' }}>My favorite movies: </strong>{' '}
+            The Godfather, Papillon (1973), Pulp Fiction, The Hateful Eight,
+            Sherlock Holmes (2009), The Lord of the Rings: The Two Towers, The
+            Game (1997), No Country For Old Men, Lost Highway, Warrior,
+            Undisputed 3, The Matrix, The Usual Suspects, 1408 (2007){' '}
           </p>
           <p>
-            <strong style={{ color: "#96d0ff" }}>My favorite Tv Series:</strong> Vikings, Van Helsing, Mr.
-            Robot, Sherlock, Spartacus, Peaky Blinders, Banshee, Narcos, Prison
-            Break, House of Cards, La Case De Papel, The Mentalist
+            <strong style={{ color: '#96d0ff' }}>My favorite Tv Series:</strong>{' '}
+            Vikings, Van Helsing, Mr. Robot, Sherlock, Spartacus, Peaky
+            Blinders, Banshee, Narcos, Prison Break, House of Cards, La Case De
+            Papel, The Mentalist
           </p>
           <blockquote>
             <p>
-              <strong style={{ color: "#96d0ff" }}> My favorite quotations:</strong>
+              <strong style={{ color: '#96d0ff' }}>
+                {' '}
+                My favorite quotations:
+              </strong>
             </p>
             <p>
-              {" "}
+              {' '}
               "It is the power of the mind to be unconquerable..." - Seneca
             </p>
             <p>"I will either find a way, or make one." - Hannibal Barca </p>
             <p>
               "Give me six hours to chop down a tree and I will spend the first
-              four sharpening the axe." - Abraham Lincoln{" "}
+              four sharpening the axe." - Abraham Lincoln{' '}
             </p>
             <p>
               "All men can see these tactics whereby I conquer, but what none

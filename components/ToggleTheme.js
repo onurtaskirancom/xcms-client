@@ -8,6 +8,7 @@ const ToggleTheme = () => {
 
   return (
     <>
+    
       <Head>
 
       <script
@@ -47,7 +48,7 @@ const ToggleTheme = () => {
           }}
            style={{ fontSize: "30px"}}
         >
-           <img src={"/images/moon.png"}  />
+           <img src={"/images/moon.png"} alt="onurtaskiran.com"  />
         </span>
       ) : (
         <span
@@ -57,7 +58,7 @@ const ToggleTheme = () => {
           }}
            style={{ fontSize: "30px" }}
         > 
-           <img src={"/images/sun.png"}  />
+           <img src={"/images/sun.png"} alt="onurtaskiran.com"  />
         </span>
       )}
     </>

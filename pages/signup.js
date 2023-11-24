@@ -59,8 +59,8 @@ function Signup() {
         <meta description="Onur Taskiran Blog Signup form" />
       </Head>
       <Row>
-        <Col span={8} offset={8}>
-          <h1 style={{ paddingTop: "100px" }}>Signup</h1>
+        <Col span={8} offset={8} className="neo-signup">
+          <h1 style={{ paddingTop: '100px' }}>Signup</h1>
 
           <Form
             name="normal_login"
@@ -71,19 +71,19 @@ function Signup() {
             {/* name */}
             <Form.Item
               name="name"
-              rules={[{ required: true, message: "Please input your name!" }]}
+              rules={[{ required: true, message: 'Please input your name!' }]}
             >
               <Input
-                style={{ minWidth: "260px" }}
+                style={{ minWidth: '300px' }}
                 prefix={<UserOutlined className="site-form-item-icon" />}
                 placeholder="Name"
                 size="large"
               />
             </Form.Item>
             {/* email */}
-            <Form.Item name="email" rules={[{ type: "email" }]}>
+            <Form.Item name="email" rules={[{ type: 'email' }]}>
               <Input
-                style={{ minWidth: "260px" }}
+                style={{ minWidth: '300px' }}
                 prefix={<MailOutlined className="site-form-item-icon" />}
                 placeholder="Email"
                 size="large"
@@ -93,11 +93,11 @@ function Signup() {
             <Form.Item
               name="password"
               rules={[
-                { required: true, message: "Please input your Password!" },
+                { required: true, message: 'Please input your Password!' },
               ]}
             >
               <Input.Password
-                style={{ minWidth: "260px" }}
+                style={{ minWidth: '300px' }}
                 prefix={<LockOutlined className="site-form-item-icon" />}
                 type="password"
                 placeholder="Password"
@@ -123,16 +123,17 @@ function Signup() {
                 </a>
               </Link>
               <img
-                src={"/images/onurtaskiran-logo.png"}
+                src={'/images/onurtaskiran-logo.png'}
                 className="onur"
-                alt={"onur-taskiran"}
+                alt={'onur-taskiran'}
                 height={290}
                 width={300}
                 style={{
-                  borderRadius: "20%",
-                  display: "block",
-                  marginLeft: "auto",
-                  marginRight: "auto",
+                  borderRadius: '20%',
+                  display: 'block',
+                  marginLeft: 'auto',
+                  marginRight: 'auto',
+                  marginTop: '30px',
                 }}
               />
             </Form.Item>

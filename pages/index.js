@@ -95,15 +95,7 @@ export const Home = ({ posts }) => {
           }}
         >
           {allPosts.map((post, i) => (
-            <Card
-              key={i}
-              style={{
-                marginTop: '25px',
-                paddingLeft: '30px',
-                paddingRight: '30px',
-              }}
-              hoverable
-            >
+            <Card className="allpost" key={i} hoverable>
               {/* <Meta title={post.title} /> */}
               <Link href={`/post/${post.slug}`}>
                 <a>
@@ -111,7 +103,8 @@ export const Home = ({ posts }) => {
                 </a>
               </Link>
               <p>
-                <CalendarOutlined />&nbsp;
+                <CalendarOutlined />
+                &nbsp;
                 {dayjs(post.createdAt).format('MMMM D, YYYY - HH:mm')}
                 &nbsp; ~{' '}
                 {post?.categories.map((c) => (
@@ -140,7 +133,7 @@ export const Home = ({ posts }) => {
                       marginBottom: '10px',
                     }}
                     src={post.featuredImage?.url || 'images/default.jpeg'}
-                    alt={post.title}
+                    alt={post.title + ' - onurtaskiran.com ' }
                   />
                 </a>
               </Link>

@@ -66,7 +66,7 @@ function Signin() {
         <meta description="Onur Taskiran Blog Signin form" />
       </Head>
       <Row>
-        <Col span={8} offset={8}>
+        <Col span={8} offset={8} className="neo-signin">
           <h1 style={{ paddingTop: "100px" }}>Signin</h1>
 
           <Form
@@ -83,7 +83,7 @@ function Signin() {
             {/* email */}
             <Form.Item name="email" rules={[{ type: "email" }]}>
               <Input
-                style={{ minWidth: "260px" }}
+                style={{ minWidth: "300px" }}
                 prefix={<MailOutlined className="site-form-item-icon" />}
                 placeholder="Email"
                 size="large"
@@ -97,7 +97,7 @@ function Signin() {
               ]}
             >
               <Input.Password
-                style={{ minWidth: "260px" }}
+                style={{ minWidth: "300px" }}
                 prefix={<LockOutlined className="site-form-item-icon" />}
                 type="password"
                 placeholder="Password"
@@ -138,6 +138,7 @@ function Signin() {
                   display: "block",
                   marginLeft: "auto",
                   marginRight: "auto",
+                  marginTop: "30px",
                 }}
               />
             </Form.Item>
