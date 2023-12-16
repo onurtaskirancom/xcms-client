@@ -27748,10 +27748,10 @@ h3:hover {
  }
 
  .neo-comment {
-  background-color: #9fc7f1;
+  background-color: #d3e4f7;
   color: #212121;
   border-radius: 5px;
-  border-color: #fff;
+  border-color: #9fc7f1;
   border-style: solid;
   border-width: 2px;
   padding: 5px;
@@ -27761,6 +27761,6 @@ h3:hover {
   }
 
   a:hover {
-    color: #fff;
+    color: #ff00a5;
   }
 }
