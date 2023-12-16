@@ -27746,3 +27746,21 @@ h3:hover {
  .token.italic {
      font-style: italic;
  }
+
+ .neo-comment {
+  background-color: #9fc7f1;
+  color: #212121;
+  border-radius: 5px;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 2px;
+  padding: 5px;
+  font-size: 14px;
+  a {
+    color: #177ddc;
+  }
+
+  a:hover {
+    color: #fff;
+  }
+}

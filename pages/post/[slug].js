@@ -63,6 +63,8 @@ export const SinglePost = ({ post, postComments }) => {
     }
   };
 
+
+
   return (
     <>
       <Head>

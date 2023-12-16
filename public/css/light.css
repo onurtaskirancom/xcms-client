@@ -27292,3 +27292,21 @@ pre[class*="language-"] {
 .token.number {
   color: #00af9f;
 }
+
+ .neo-comment {
+  background-color: #e7e7e7;
+  color: #212121;
+  border-radius: 5px;
+  border-color: #9fc7f1;
+  border-style: solid;
+  border-width: 2px;
+  padding: 5px;
+  font-size: 14px;
+  a {
+    color: #177ddc;
+  }
+
+  a:hover {
+    color: #c41d7f;
+  }
+}
