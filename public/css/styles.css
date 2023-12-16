@@ -29612,7 +29612,7 @@ pre[class*='language-'] {
 }
 
 .token.punctuation {
-  color: #c5c8c6;
+  color: #82aaff;
 }
 
 .namespace {
@@ -29634,7 +29634,7 @@ pre[class*='language-'] {
 }
 
 .token.operator {
-  color: #ededed;
+  color: #ce78b0;
 }
 
 .token.entity {
