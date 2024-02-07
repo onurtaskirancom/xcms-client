@@ -126,7 +126,7 @@ function EditPost({ page = "admin" }) {
  };
 
   return (
-    <Row style={{ paddingTop: "59px" }}>
+    <Row style={{ paddingTop: '59px' }}>
       <Col span={14} offset={1}>
         <h1>Edit post</h1>
         <Input
@@ -135,7 +135,7 @@ function EditPost({ page = "admin" }) {
           placeholder="Give your post a title"
           onChange={(e) => {
             setTitle(e.target.value);
-            localStorage.setItem("post-title", JSON.stringify(e.target.value));
+            localStorage.setItem('post-title', JSON.stringify(e.target.value));
           }}
         />
         <br />
@@ -143,12 +143,12 @@ function EditPost({ page = "admin" }) {
 
         {loading ? (
           <div>Loading...</div>
-    
         ) : (
           <div className="editor-scroll">
             <Editor
               //dark={theme === "light" ? false : true}
               //defaultValue={content}
+              apiKey="f4sy46odc38bc8luy95cxk2kudxxlo0x763w75ouevrxgyqk"
               initialValue={content}
               onEditorChange={handleBody}
               init={{
@@ -163,36 +163,48 @@ function EditPost({ page = "admin" }) {
                 //  'bold italic backcolor | alignleft aligncenter ' +
                 //  'alignright alignjustify | bullist numlist outdent indent | ' +
                 //  'removeformat | help',
-               // selector: 'textarea',
-              //plugins: ['autosave', 'lists', 'code', 'image', 'image code', 'fullscreen',  'tabfocus', 'image media link tinydrive code imagetools', 'emoticons', 'searchreplace', 'directionality', 'importcss', 'lists', 'fullpage', 'table', 'template', 'wordcount', 'visualchars', 'paste','autosave lists autolink', 'textarea', 'visualblocks', 'advlist','image imagetools', 'anchor', 'autosave', 'autolink', 'autoresize','bbcode','charmap', 'codesample', 'print', 'save', 'quickbars', 'autolink'],
-              plugins: 'print preview  importcss autoresize code fullpage tinydrive searchreplace autolink autosave save directionality  visualblocks visualchars fullscreen image link media  template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists  wordcount   imagetools textpattern noneditable help    charmap   quickbars  emoticons ',
-              codesample_languages: [
-                { text: 'css', value: 'css' },
-                { text: 'javascript', value: 'javascript' },
-                { text: 'aspnet', value: 'aspnet' },
-                { text: 'c', value: 'c' },
-                { text: 'csharp', value: 'csharp' },
-                { text: 'django', value: 'django' },
-                { text: 'git', value: 'git' },
-                { text: 'go', value: 'go' },
-                { text: 'java', value: 'java' },
-                { text: 'nginx', value: 'nginx' },
-                { text: 'php', value: 'php' },
-                { text: 'python', value: 'python' },
-                { text: 'sass', value: 'sass' },
-                { text: 'scss', value: 'scss' },
-                { text: 'swift', value: 'swift' },
-                { text: 'typescript', value: 'typescript' },
-                { text: 'phpdoc', value: 'phpdoc' },
-                { text: 'json', value: 'json' }
-              ],
-      
-              toolbar: 'undo redo  | bold italic |  code |link | visualblocks | image |undo redo styleselect bold italic alignleft aligncenter alignright alignjustify | bullist numlist outdent indent',
-              icon: 'bold',
-              tooltip: 'Formatting',
-              toolbar_sticky: true,
-              items: 'bold italic underline | superscript subscript'
-               }}
+                // selector: 'textarea',
+                //plugins: ['autosave', 'lists', 'code', 'image', 'image code', 'fullscreen',  'tabfocus', 'image media link tinydrive code imagetools', 'emoticons', 'searchreplace', 'directionality', 'importcss', 'lists', 'fullpage', 'table', 'template', 'wordcount', 'visualchars', 'paste','autosave lists autolink', 'textarea', 'visualblocks', 'advlist','image imagetools', 'anchor', 'autosave', 'autolink', 'autoresize','bbcode','charmap', 'codesample', 'print', 'save', 'quickbars', 'autolink'],
+                plugins:
+                  'ai tinycomments mentions anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed permanentpen footnotes advtemplate advtable advcode editimage tableofcontents mergetags powerpaste tinymcespellchecker autocorrect a11ychecker typography inlinecss print preview  importcss autoresize code fullpage tinydrive searchreplace autolink autosave save directionality  visualblocks visualchars fullscreen image link media  template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists  wordcount   imagetools textpattern noneditable help    charmap   quickbars  emoticons',
+                codesample_languages: [
+                  { text: 'css', value: 'css' },
+                  { text: 'javascript', value: 'javascript' },
+                  { text: 'aspnet', value: 'aspnet' },
+                  { text: 'c', value: 'c' },
+                  { text: 'csharp', value: 'csharp' },
+                  { text: 'django', value: 'django' },
+                  { text: 'git', value: 'git' },
+                  { text: 'go', value: 'go' },
+                  { text: 'java', value: 'java' },
+                  { text: 'nginx', value: 'nginx' },
+                  { text: 'php', value: 'php' },
+                  { text: 'python', value: 'python' },
+                  { text: 'sass', value: 'sass' },
+                  { text: 'scss', value: 'scss' },
+                  { text: 'swift', value: 'swift' },
+                  { text: 'typescript', value: 'typescript' },
+                  { text: 'phpdoc', value: 'phpdoc' },
+                  { text: 'json', value: 'json' },
+                ],
+
+                toolbar:
+                  'undo redo  | bold italic |  code |link | visualblocks | image |undo redo styleselect bold italic alignleft aligncenter alignright alignjustify | bullist numlist outdent indent',
+                icon: 'bold',
+                tooltip: 'Formatting',
+                toolbar_sticky: true,
+                items: 'bold italic underline | superscript subscript',
+                tinycomments_mode: 'embedded',
+                tinycomments_author: 'Author name',
+                mergetags_list: [
+                  { value: 'First.Name', title: 'First Name' },
+                  { value: 'Email', title: 'Email' },
+                ],
+                ai_request: (request, respondWith) =>
+                  respondWith.string(() =>
+                    Promise.reject('See docs to implement AI Assistant')
+                  ),
+              }}
               onChange={(v) => {
                 // setContent(v());
                 // localStorage.setItem("post-content", JSON.stringify(v()));
@@ -210,14 +222,14 @@ function EditPost({ page = "admin" }) {
 
       <Col span={6} offset={1}>
         <Button
-          style={{ margin: "10px 0px 10px 0px", width: "100%" }}
+          style={{ margin: '10px 0px 10px 0px', width: '100%' }}
           onClick={() => setVisible(true)}
         >
           Preview
         </Button>
 
         <Button
-          style={{ margin: "10px 0px 10px 0px", width: "100%" }}
+          style={{ margin: '10px 0px 10px 0px', width: '100%' }}
           onClick={() => setMedia({ ...media, showMediaModal: true })}
         >
           <UploadOutlined /> Featured Image
@@ -229,7 +241,7 @@ function EditPost({ page = "admin" }) {
           mode="multiple"
           allowClear={true}
           placeholder="Select categories"
-          style={{ width: "100%" }}
+          style={{ width: '100%' }}
           onChange={(v) => setCategories(v)}
           value={[...categories]}
         >
@@ -244,7 +256,7 @@ function EditPost({ page = "admin" }) {
           mode="multiple"
           allowClear={true}
           placeholder="Select tags"
-          style={{ width: "100%" }}
+          style={{ width: '100%' }}
           onChange={(t) => setTags(t)}
           value={[...tags]}
         >
@@ -254,20 +266,20 @@ function EditPost({ page = "admin" }) {
         </Select>
 
         {media?.selected ? (
-          <div style={{ marginTop: "15px" }}>
+          <div style={{ marginTop: '15px' }}>
             <Image width="100%" src={media?.selected?.url} />
           </div>
         ) : featuredImage?.url ? (
-          <div style={{ marginTop: "15px" }}>
+          <div style={{ marginTop: '15px' }}>
             <Image width="100%" src={featuredImage?.url} />
           </div>
         ) : (
-          ""
+          ''
         )}
 
         <Button
           loading={loading}
-          style={{ margin: "10px 0px 10px 0px", width: "100%" }}
+          style={{ margin: '10px 0px 10px 0px', width: '100%' }}
           type="primary"
           onClick={handlePublish}
         >
@@ -286,7 +298,7 @@ function EditPost({ page = "admin" }) {
       >
         <h1>{title}</h1>
         <Editor
-          dark={theme === "light" ? false : true}
+          dark={theme === 'light' ? false : true}
           defaultValue={content}
           readOnly={true}
         />

@@ -15,7 +15,7 @@
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
     "@react-hook/window-size": "^3.0.7",
-    "@tinymce/tinymce-react": "^4.2.0",
+    "@tinymce/tinymce-react": "^4.3.2",
     "antd": "^4.19.2",
     "axios": "^0.26.1",
     "core-js": "^3.22.5",
